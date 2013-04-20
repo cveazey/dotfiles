@@ -69,11 +69,17 @@ alias status='git status'
 alias push='git push'
 alias pull='git pull; git submodule update --recursive'
 alias stash='git stash'
+alias log='git log'
+
 # workaround for git-log breaking on long commit msgs
 export LESS="erX"
 
 #######################################
 ### Python
+
+export SYSPATH=$PATH
+export MYPATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin # virtualenv, pip, 2.7.4
+export PATH=$MYPATH
 
 export VIRTUALENV_DISTRIBUTE=true
 export PIP_REQUIRE_VIRTUALENV=true
