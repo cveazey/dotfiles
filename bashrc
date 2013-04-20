@@ -66,8 +66,8 @@ alias edit=$EDITOR
 ### Git
 
 alias status='git status'
-alias push='git push'
-alias pull='git pull; git submodule update --recursive'
+alias push='git push --recurse-submodules=check'
+alias pull='git pull; git submodule update --recursive --merge'
 alias stash='git stash'
 # workaround for git-log breaking on long commit msgs
 export LESS="erX"
