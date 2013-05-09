@@ -33,7 +33,8 @@ fi
 prompt_command () {
  	# set the titlebar to the last 2 fields of pwd
     local TITLEBAR='\[\e]2;`pwdtail`\a'
-    export PS1="\[${TITLEBAR}\]${BRANCH}\$ "
+    local VENVNAME="`basename $VIRTUAL_ENV 2>/dev/null`"
+    export PS1="\[${TITLEBAR}\]${BRANCH}${VENVNAME}\$ "
 }
 
 PROMPT_COMMAND=prompt_command
@@ -85,6 +86,13 @@ export VIRTUALENV_DISTRIBUTE=true
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
+# virtualenvwrapper - ALWAYS SET AFTER PATH
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Development/Python
+source /usr/local/share/python/virtualenvwrapper.sh
+
 syspip(){
 	PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
+
+
