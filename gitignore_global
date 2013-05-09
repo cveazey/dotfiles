@@ -58,3 +58,8 @@ profile
 DerivedData
 .idea/
 *.hmap
+
+########################################
+### Sublime Text 2
+
+*.sublime-workspace
