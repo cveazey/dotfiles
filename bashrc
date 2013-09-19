@@ -78,9 +78,7 @@ export LESS="erX"
 #######################################
 ### Python
 
-export SYSPATH=$PATH
-export MYPATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin # virtualenv, pip, 2.7.4
-export PATH=$MYPATH
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin # virtualenv, pip, 2.7.4
 
 export VIRTUALENV_DISTRIBUTE=true
 export PIP_REQUIRE_VIRTUALENV=true
@@ -89,7 +87,7 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 # virtualenvwrapper - ALWAYS SET AFTER PATH
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Development/Python
-source /usr/local/share/python/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 syspip(){
 	PIP_REQUIRE_VIRTUALENV="" pip "$@"
