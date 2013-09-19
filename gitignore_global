@@ -59,6 +59,9 @@ DerivedData
 .idea/
 *.hmap
 
+#CocoaPods
+Pods
+
 ########################################
 ### Sublime Text 2
 
