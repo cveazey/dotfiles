@@ -80,7 +80,6 @@ export LESS="erX"
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin # virtualenv, pip, 2.7.4
 
-export VIRTUALENV_DISTRIBUTE=true
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
