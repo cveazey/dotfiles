@@ -7,8 +7,8 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 # Source git's completions from the system installation
-if [ -f /usr/share/git-core/git-completion.bash ]; then
-	. /usr/share/git-core/git-completion.bash
+if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
+	. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
 fi
 
 # Source brew's completions for itself?
@@ -23,8 +23,8 @@ fi
 
 # if CWD is in a Git repo, show current branch
 
-if [ -f /usr/share/git-core/git-prompt.sh ]; then
-	. /usr/share/git-core/git-prompt.sh
+if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh ]; then
+	. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 	if [ "\$(type -t __git_ps1)" ]; then
 		BRANCH="\$(__git_ps1 '%s ')"
 	fi
