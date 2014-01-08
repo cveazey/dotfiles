@@ -42,3 +42,8 @@ nosetests.xml
 ### Sublime Text 2
 
 *.sublime-workspace
+
+########################################
+### OS X
+
+.DS_Store
