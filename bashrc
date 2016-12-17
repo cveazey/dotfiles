@@ -49,7 +49,7 @@ pwdtail () { #returns the last 2 fields of the working directory
 
 # export CLICOLOR=true
 # export CLICOLOR_FORCE=true
-alias ls='ls -1G'
+alias ll='ls -alG'
 # alias less='less -R'
 
 
@@ -57,10 +57,10 @@ alias ls='ls -1G'
 ### Text Editing
 
 # Set editor to sublime text when logged in locally
-if [ -z "$SSH_TTY" ] ; then
-	export EDITOR='subl -w'
-fi
-alias edit=$EDITOR
+# if [ -z "$SSH_TTY" ] ; then
+# 	export EDITOR='subl -w'
+# fi
+# alias edit=$EDITOR
 
 
 #######################################
@@ -78,7 +78,7 @@ export LESS="erX"
 #######################################
 ### Python
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin # virtualenv, pip, 2.7.4
+export PATH=/usr/local/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin # virtualenv, pip, 2.7.4
 
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
@@ -92,4 +92,16 @@ syspip(){
 	PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
 
+#######################################
+### Java
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
+#######################################
+### Go
+
+GOROOT=/usr/local/go
+export GOPATH=~/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 

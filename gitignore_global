@@ -47,3 +47,21 @@ nosetests.xml
 ### OS X
 
 .DS_Store
+
+########################################
+### Eclipse
+
+.settings
+
+########################################
+### IntelliJ
+
+.idea/
+*.iml
+
+########################################
+### Maven
+
+dependency-reduced-pom.xml
+
+
